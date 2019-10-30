@@ -21,6 +21,8 @@ var Player = function(name, color, position, direction) {
     THREE.GeometryUtils.merge(canon, sphere);
 
     this.graphic = new THREE.Mesh(sphere, this.material);
+    this.graphic.position.x = this.position.x;
+    this.graphic.position.y = this.position.y;
     this.graphic.position.z = 6;
     this.graphic.rotateOnAxis(new THREE.Vector3(0,0,1), this.direction);
 };
