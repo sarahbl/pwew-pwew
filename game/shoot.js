@@ -50,6 +50,7 @@ function bullet_collision()
             scene.remove(player1.bullets[i]);
             player1.bullets.splice(i, 1);
             i--;
+            
         }
     }
 
@@ -62,7 +63,7 @@ function player_collision()
     var y = player1.graphic.position.y + HEIGHT / 2;
 
     if ( x < 0 )
-        player1.graphic.position.y -= x;
+        player1.graphic.position.x -= x;
     if ( x > WIDTH )
         player1.graphic.position.x -= x - WIDTH;
     if ( y < 0 )
